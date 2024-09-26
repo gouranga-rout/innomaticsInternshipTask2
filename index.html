@@ -1,0 +1,113 @@
+<!--Innomatics research lab Full stack web development internship -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Directory Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Company Directory Portal</h1>
+
+        <!-- Employee Registration Form -->
+        <form action="#" method="post">
+            <h2>Employee Registration Form</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Select</option>
+                <option value="it">IT</option>
+                <option value="hr">HR</option>
+                <option value="finance">Finance</option>
+            </select>
+
+            <label for="employee-id">Employee ID:</label>
+            <div class="id-group">
+               <span class="prefix">IN</span>  
+               <input type="number" id="employee-id" name="employee-id" placeholder="Enter employee ID (only number)"  required>
+            </div>
+            <label for="profile-picture">Profile Picture URL:</label>
+            <input type="url" id="profile-picture" name="profile-picture" placeholder="Enter profile picture URL" required>
+
+            <button type="submit">Register Employee</button>
+        </form>
+
+        <!-- Employee List -->
+        <div class="employee-list">
+            <h2>Employee List</h2>
+            <ul>
+                <li>1. Aaryan : <a href="mailto:aaryan@gmail.com">aaryan@gmail.com</a></li>
+                <li>2. Princess : <a href="mailto: princess@gmail.com">princess@gmail.com</a></li>
+                <li>3. Yaro : <a href="mailto: yaro@gmail.com">yaro@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <!-- Employee Details -->
+        <div class="employee-details">
+            <h2>Employee Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Employee ID</th>
+                        <th>Department</th>
+                        <th>Profile Picture</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aaryan</td>
+                        <td>12345</td>
+                        <td>IT</td>
+                        <td><img src="./asset/user.png" alt="Profile Picture" style="width: 3.125rem; height: 3.125rem;" background="none"></td>
+                    </tr>
+                    <tr>
+                        <td>Princess</td>
+                        <td>67890</td>
+                        <td>HR</td>
+                        <td><img src="./asset/user.png" alt="Profile Picture" style="width: 3.125rem; height: 3.125rem;"></td>
+                    </tr>
+                    <tr>
+                        <td>Yaro</td>
+                        <td>24680</td>
+                        <td>Finance</td>
+                        <td><img src="./asset/user.png" alt="Profile Picture" style="width: 3.125rem; height: 3.125rem;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Company Location -->
+        <div class="map-section">
+            <h2>Company Location</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d367.26607652443727!2d78.38971596211196!3d17.498030204824097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3fdf6bde9%3A0x752db86a6ab3be2a!2sInnomatics%20Research%20Labs!5e1!3m2!1sen!2sin!4v1727238708760!5m2!1sen!2sin" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+
+
+<footer>
+    <div class="footer-container">
+        <p>Made with &hearts; By <a href ="https://www.instagram.com/gouranga__rout/"><span> Aaryan </span></a></br>
+           2024 &copy; all rights reserved </p>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
+
+

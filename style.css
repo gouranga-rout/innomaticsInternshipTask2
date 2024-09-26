@@ -1,0 +1,188 @@
+/* Root font size for rem scaling */
+  html {
+    font-size: 16px; /* 1rem = 16px */
+   }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+ .container {
+    max-width: 50rem;
+    margin: .5rem auto;
+    background-color: white;
+    padding: .8rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+ }
+
+  h1 {
+    margin-bottom: 1.7rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: #fff;
+    background-color: crimson;
+    border-radius: 0.3125rem;
+ }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.6rem;
+    margin-top: .2rem;
+    color: crimson;
+    text-align: center;
+    border-bottom: 3px double black;
+ }
+
+ form {
+    background-color: #f0f8e2;;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    margin-bottom: 2rem;
+ }
+
+ form label {
+    display: block;
+    margin-bottom: 0.3125rem;
+    font-weight: bold;
+    color: #2e0202;
+ }
+
+
+ form input, form select {
+    color: green;
+    font-weight: 500;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.625rem;
+    border-radius: 0.3125rem;
+    border: 0.0625rem solid blue;
+    box-sizing: border-box;
+ }
+
+ input::placeholder {
+    color: green;
+  }
+
+ .id-group {
+   display: flex;
+   align-items: center;
+ }
+
+  .prefix {
+    margin-bottom: .59rem;
+    height: 2rem;
+    padding: 0.3rem;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    background-color: lightgray;
+    border: 0.0625rem solid blue;
+    font-weight: 500;
+    user-select: none; /*it's already mention "IN" */
+ }
+
+ form button {
+    width: 100%;
+    padding: 0.625rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+ }
+
+ form button:hover {
+    background-color: #0056b3;
+ }
+
+ .employee-list, .employee-details {
+    background-color: #f0f8e2;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    margin-bottom: 2rem;
+ }
+
+ .employee-list ul {
+    list-style: none;
+    padding: 0;
+ }
+
+ .employee-list li {
+    font-size: 1.125rem;
+    margin-bottom: 0.3125rem;
+    border-bottom: 1px solid crimson;
+ }
+
+ .employee-list li a {
+    text-decoration: none;
+    color: #007bff;
+ }
+  
+ .employee-list li a:hover {   
+    text-decoration: underline;
+ }
+
+ .employee-details table {
+    width: 100%;
+    border-collapse: collapse;
+ }
+
+ .employee-details th, 
+ .employee-details td {
+    padding: 0.5rem;
+    border: 0.0625rem solid #ccc;
+    text-align: center;
+    font-size: .8rem;
+    color: black;
+  }
+
+  .employee-details th {
+     background-color: #007bff;
+     color: white;
+     text-align: center;
+ }
+
+  .map-section {
+     margin-top: 2rem;
+  }
+
+  .map-section iframe {
+     width: 100%;
+     height: 18.75rem;
+     border: 0;
+     border-radius: 0.625rem;
+  }
+
+
+ footer {
+    background-color: #f0f0f0;
+    padding: .25rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.2rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+footer a {
+   text-decoration: none;
+   color: crimson;
+}
+
+
+
+
+
+
