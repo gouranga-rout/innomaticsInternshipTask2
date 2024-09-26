@@ -18,7 +18,7 @@ nav{
   max-width: 100%;
   background: #dff0ee;;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -296,7 +296,8 @@ input[type="checkbox"]{
     background-color: white;
     height: 50%;
     width: 100%;
-    text-align: center;
+ /*   text-align: center;*/
+   
     display: block;
   }
 
@@ -325,3 +326,14 @@ input[type="checkbox"]{
   }
 }
 
+@media (max-width: 768px) {
+  nav .menu-btn {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  #click:checked ~ ul {
+    display: block;
+  }
+}
