@@ -1,6 +1,7 @@
 /* Root font size for rem scaling */
   html {
-    font-size: 16px; /* 1rem = 16px */
+    font-size: 16px; /* 1rem = 16px * */
+    scroll-behavior: smooth;
    }
 
   body {
@@ -8,7 +9,75 @@
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    scroll-behavior: smooth;
   }
+ 
+nav{
+  display: flex;
+  height: 70px;
+  max-width: 100%;
+  background: #dff0ee;;
+  align-items: center;
+  justify-content: space-between; 
+  flex-wrap: wrap;
+}
+
+
+nav .logo{
+  width: 13rem;
+  height: 2.5rem;
+  margin-left: -2rem;
+}
+
+.logo img {
+ width: 100%;
+ height: 100%;
+ }
+
+
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+
+nav ul li{
+  margin: 0 5px;
+}
+
+
+nav ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+
+nav ul li a.active,
+nav ul li a:hover{
+  color: #fff;
+  background: crimson;
+}
+
+
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+
+
 
  .container {
     max-width: 50rem;
@@ -186,7 +255,68 @@
 
 .footer-container span {
   color: crimson;
+ }
+
+
+
+
+
+/*Responsive Media queries for mobile device*/
+
+
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
 }
 
 
+@media (max-width: 920px) {
+   nav {
+    height: 60px;    
+    background-color: #dff0ee;
+  }
+  nav .menu-btn i{
+    display: block;
+    color: crimson;
+  }
+
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+
+
+  nav ul{
+    position: absolute;
+    top: 64px;
+    left: -120%;
+    background: #dff0ee;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 90%;
+    margin: 25px -40px;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: crimson;
+    color: white;
+  }
+}
 

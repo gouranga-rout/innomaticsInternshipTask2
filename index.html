@@ -5,16 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Directory Portal</title>
+    <link rel="stylesheet" href=
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+      <nav>
+         <div class="logo">
+           <img src="./asset/Innomatics.png" alt="logo">
+         </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#list">Emp_List</a></li>
+            <li><a href="#details">Emp_Details</a></li>
+            <li><a href="#location">Our_Location</a></li>
+         </ul>
+      </nav>
 
-    <div class="container">
-        
+    <div class="container">        
         <h1>Company Directory Portal</h1>
 
         <!-- Employee Registration Form -->
-        <form action="#" method="post">
+        <form action="#" method="post" id="registration">
             <h2>Employee Registration Form</h2>
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter full name" required>
@@ -42,9 +58,9 @@
         </form>
 
         <!-- Employee List -->
-        <div class="employee-list">
+        <div class="employee-list" id="list">
             <h2>Employee List</h2>
-            <ul>
+            <ul class="list">
                 <li>1. Aaryan : <a href="mailto:aaryan@gmail.com">aaryan@gmail.com</a></li>
                 <li>2. Princess : <a href="mailto: princess@gmail.com">princess@gmail.com</a></li>
                 <li>3. Yaro : <a href="mailto: yaro@gmail.com">yaro@gmail.com</a></li>
@@ -52,7 +68,7 @@
         </div>
 
         <!-- Employee Details -->
-        <div class="employee-details">
+        <div class="employee-details" id="details">
             <h2>Employee Details</h2>
             <table>
                 <thead>
@@ -87,7 +103,7 @@
         </div>
 
         <!-- Company Location -->
-        <div class="map-section">
+        <div class="map-section" id="location">
             <h2>Company Location</h2>
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d367.26607652443727!2d78.38971596211196!3d17.498030204824097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3fdf6bde9%3A0x752db86a6ab3be2a!2sInnomatics%20Research%20Labs!5e1!3m2!1sen!2sin!4v1727238708760!5m2!1sen!2sin" 
@@ -97,7 +113,7 @@
     </div>
 
 
-
+<!--footer section--> 
 <footer>
     <div class="footer-container">
         <p>Made with &hearts; By <a href="https://www.instagram.com/gouranga__rout/"><span>Aaryan</span></a><br>2024 © all rights reserved</p>
