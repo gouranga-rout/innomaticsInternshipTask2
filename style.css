@@ -38,7 +38,7 @@ nav .logo{
 
 nav ul{
   display: flex;
-/*  flex-wrap: wrap;*/
+  flex-wrap: wrap;
   list-style: none;
   align-item: right;
   padding: 0;
