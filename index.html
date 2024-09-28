@@ -1,37 +1,45 @@
-<!--Innomatics research lab Full stack web development internship -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Directory Portal</title>
-    <link rel="stylesheet" href=
-              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<!--
-      <nav>
-         <div class="logo">
-           <img src="./asset/Innomatics.png" alt="logo">
-         </div>
-         <input type="checkbox" id="click">
-         <label for="click" class="menu-btn">
-         <i class="fas fa-bars"></i>
-         </label>
-         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#registration">Registration</a></li>
-            <li><a href="#list">Emp_List</a></li>
-            <li><a href="#details">Emp_Details</a></li>
-            <li><a href="#location">Our_Location</a></li>
-         </ul>
-      </nav>
--->
-    <div class="container">        
-        <h1>Company Directory Portal</h1>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Innomatics - Directory Portol</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Employee Registration Form -->
-        <form action="#" method="post" id="registration">
+    </head>
+  
+    <body>
+
+<!--nav bar section start-->
+      <nav>
+        <div class="logo">
+           <img src="./asset/Innomatics.png">
+        </div>
+         
+        <input type="checkbox" id="click">  
+    	  <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i> 
+	  </label>
+
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+	  <li><a href="#signup">Signup</a></li>
+	  <li><a href="#emplist">EmpList</a></li>
+	  <li><a href="#empdata">EmpData</a></li>
+	  <li><a href="#location">Location</a></li>
+        </ul>
+      </nav>
+<!--nav bar section ends here -->       
+
+
+<!--content container section start here-->
+  <div class="container">
+      <h1>Company Directory Portal</h1>
+  
+
+ <!-- Employee Registration Form -->
+        <form  method="post" id="signup">
             <h2>Employee Registration Form</h2>
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter full name" required>
@@ -49,7 +57,7 @@
 
             <label for="employee-id">Employee ID:</label>
             <div class="id-group">
-               <span class="prefix">IN</span>  
+               <span class="prefix">IN</span>
                <input type="number" id="employee-id" name="employee-id" placeholder="Enter employee ID (only number)"  required>
             </div>
             <label for="profile-picture">Profile Picture URL:</label>
@@ -57,9 +65,10 @@
 
             <button type="submit">Register Employee</button>
         </form>
+<!--Employee registration form section ended here -->
 
-        <!-- Employee List -->
-        <div class="employee-list" id="list">
+<!-- Employee List -->
+        <div class="employee-list" id="emplist">
             <h2>Employee List</h2>
             <ul class="list">
                 <li>1. <a href="#details">Aaryan</a> : <a href="mailto:aaryan@gmail.com">aaryan@gmail.com</a></li>
@@ -67,16 +76,17 @@
                 <li>3. <a href="#details">Yaro</a> : <a href="mailto: yaro@gmail.com">yaro@gmail.com</a></li>
             </ul>
         </div>
+<!--Employee List ends here-->
 
-        <!-- Employee Details -->
-        <div class="employee-details" id="details">
+<!-- Employee Details start -->
+        <div class="employee-details" id="empdata">
             <h2>Employee Details</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Employee Name</th>
                         <th>Employee ID</th>
-                        <th>Department</th>
+                        <th>Department name</th>
                         <th>Profile Picture</th>
                     </tr>
                 </thead>
@@ -102,27 +112,36 @@
                 </tbody>
             </table>
         </div>
+<!--Employee Details ends here-->
 
-        <!-- Company Location -->
+<!-- Company Location -->
         <div class="map-section" id="location">
             <h2>Company Location</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d367.26607652443727!2d78.38971596211196!3d17.498030204824097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3fdf6bde9%3A0x752db86a6ab3be2a!2sInnomatics%20Research%20Labs!5e1!3m2!1sen!2sin!4v1727238708760!5m2!1sen!2sin" 
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d367.26607652443727!2d78.38971596211196!3d17.498030204824097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3fdf6bde9%3A0x752db86a6ab3be2a!2sInnomatics%20Research%20Labs!5e1!3m2!1sen!2sin!4v1727238708760!5m2!1sen!2sin"
+                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-    </div>
+      </div>
+<!--Company location ends here-->
 
-
-<!--footer section--> 
+<!--footer section start here-->
 <footer>
     <div class="footer-container">
         <p>Made with &hearts; By <a href="https://www.instagram.com/gouranga__rout/"><span>Aaryan</span></a><br>2024 © all rights reserved</p>
     </div>
 </footer>
+<!--footer section ends here-->
+   </div>   
 
-</body>
+<script>
+  document.querySelectorAll('.nav-menu li a').forEach(item => {
+    item.addEventListener('click', () => {
+      document.getElementById('click').checked = false;
+    });
+  });
+</script>
+
+
+  </body>
 </html>
-
-
-

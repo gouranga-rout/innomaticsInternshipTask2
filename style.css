@@ -1,89 +1,142 @@
-/* Root font size for rem scaling */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
   html {
-    font-size: 16px; /* 1rem = 16px * */
-    scroll-behavior: smooth;
+     font-size: 16px;
+     scroll-behavior: smooth;
+     scroll-padding-top: 4rem;
    }
 
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    scroll-behavior: smooth;
-  }
- 
-nav{
-  display: flex;
-  height: 4.375rem;
-  max-width: 100%;
-  background: #dff0ee;;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-nav .logo{
-  width: 13rem;
-  height: 2.5rem;
-  margin-left: -2rem;
-}
-
-.logo img {
- width: 100%;
- height: 100%;
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
  }
 
+ nav {
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  background-color: lightblue;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  flex-wrap: nowrap;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+ }
 
-nav ul{
+ nav .logo {
+  width: 10rem;
+  height: 2.5rem;
+ }
+
+ nav .logo img {
+  width: 100%;
+  height: 100%;
+ }
+
+ input[type="checkbox"] {
+  display: none;
+ }
+
+ nav .menu-btn i {
+  color: crimson;
+  font-size: 1.375rem;
+  cursor: pointer;
+  display: none;
+ }
+
+ nav .nav-menu {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  align-items: center;
-  padding: 0;
-  margin-left: auto;
-}
+ }
 
+nav .nav-menu li {
+ margin: 0 5px;
+ }
 
-nav ul li{
-  margin: 0 0.1875rem;
-}
-
-
-nav ul li a{
+ nav .nav-menu li a {
   color: black;
   text-decoration: none;
   font-size: 1.125rem;
   font-weight: 500;
   padding: 0.5rem 0.9375rem;
   border-radius: 0.3125rem;
-  letter-spacing: 0.0625rem;
-  transition: all 0.3s ease;
-/*  white-space: nowrap;*/
-}
+  latter-spacing: 0.0625rem;
+  transition: all .3s ease;
+ }
 
-
-nav ul li a.active,
-nav ul li a:hover{
+nav .nav-menu li a:hover {
   color: #fff;
-  background: crimson;
-}
+  background-color: crimson;
+ }
+
+/*Responsive design for mobile devices */
+/*
+@media (max-width: 1000px) {
+   nav {
+     padding: 0 40px 0 50px;
+    }
+  }
+*/
+
+ @media (max-width: 920px) {
+   nav .menu-btn i {
+      display: block;
+    }
+
+   #click:checked ~ .menu-btn i:before {
+      content: "\f00d";
+    }
+
+   nav .nav-menu {
+      position: fixed;
+      top: 3.3rem;
+      left: -100%;
+      background-color: lightblue;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+
+    }
+
+    #click:checked ~ .nav-menu {
+       left: 0px;
+    }
+
+   nav .nav-menu li {
+      width: 100%;
+      margin: 40px 0;
+   }
+
+   nav .nav-menu li a {
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 1.25rem;
+      transition: 0.6s cubic-bezier (0.68, -0.55, 0.265, 1.55);
+      color: black;
+   }
+
+    #click:checked ~ .nav-menu li a {
+      margin-left: 0px;
+    }
+
+  
+ }
 
 
-nav .menu-btn i{
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
-}
-input[type="checkbox"]{
-  display: none;
-}
+
+/*Nav bar section ends here */
 
 
-
-
- .container {
-    max-width: 50rem;
+  .container {
+    max-width: 53rem;
     margin: .5rem auto;
     background-color: white;
     padding: .8rem;
@@ -91,17 +144,20 @@ input[type="checkbox"]{
     box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
  }
 
+
+/*Registration form start here*/
   h1 {
     margin-bottom: 1.7rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: .5rem;
     color: #fff;
     background-color: crimson;
     border-radius: 0.3125rem;
  }
 
-  h2 {
+
+h2 {
     font-size: 1.25rem;
     margin-bottom: 1.6rem;
     margin-top: .2rem;
@@ -110,22 +166,21 @@ input[type="checkbox"]{
     border-bottom: 3px double black;
  }
 
- form {
+form {
     background-color: #f0f8e2;;
     padding: 1.25rem;
     border-radius: 0.625rem;
     margin-bottom: 2rem;
  }
 
- form label {
+form label {
     display: block;
     margin-bottom: 0.3125rem;
     font-weight: bold;
     color: #2e0202;
  }
 
-
- form input, form select {
+form input, form select {
     color: green;
     font-weight: 500;
     width: 100%;
@@ -136,18 +191,18 @@ input[type="checkbox"]{
     box-sizing: border-box;
  }
 
- input::placeholder {
+input::placeholder {
     color: green;
   }
 
- .id-group {
+.id-group {
    display: flex;
    align-items: center;
  }
 
-  .prefix {
+.prefix {
     margin-bottom: .59rem;
-    height: 2rem;
+    height: 2.35rem;
     padding: 0.3rem;
     align-items: center;
     box-sizing: border-box;
@@ -158,7 +213,7 @@ input[type="checkbox"]{
     user-select: none; /*it's already mention "IN" */
  }
 
- form button {
+form button {
     width: 100%;
     padding: 0.625rem;
     background-color: #007bff;
@@ -169,11 +224,15 @@ input[type="checkbox"]{
     font-size: 1rem;
  }
 
- form button:hover {
+
+form button:hover {
     background-color: #0056b3;
  }
+/*Registration form ends here*/
 
- .employee-list, .employee-details {
+
+/*employees list start*/
+.employee-list, .employee-details {
     background-color: #f0f8e2;
     padding: 1.25rem;
     border-radius: 0.625rem;
@@ -186,7 +245,7 @@ input[type="checkbox"]{
  }
 
  .employee-list li {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 0.3125rem;
     border-bottom: 1px solid crimson;
  }
@@ -196,19 +255,23 @@ input[type="checkbox"]{
     text-decoration: none;
     color: #007bff;
  }
-  
- .employee-list li a:hover {   
+
+ .employee-list li a:hover {
     text-decoration: underline;
  }
 
- .employee-details table {
+/*employees list ends here*/
+
+/*Employee details start*/
+
+.employee-details table {
     width: 100%;
     border-collapse: collapse;
  }
 
- .employee-details th, 
+ .employee-details th,
  .employee-details td {
-    padding: 0.5rem;
+    padding: 0.2rem;
     border: 0.0625rem solid #ccc;
     text-align: center;
     font-size: .8rem;
@@ -220,8 +283,10 @@ input[type="checkbox"]{
      color: white;
      text-align: center;
  }
+/*Employee details end here*/
 
-  .map-section {
+/*Company location start*/
+.map-section {
      margin-top: 2rem;
   }
 
@@ -231,9 +296,9 @@ input[type="checkbox"]{
      border: 0;
      border-radius: 0.625rem;
   }
+/*company location ends here*/
 
-
-
+/*footer section start*/
 .footer-container {
     display: flex;
     justify-content: center;
@@ -248,7 +313,7 @@ input[type="checkbox"]{
 .footer-container p {
     font-size: 1rem;
     color: #333;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
     line-height: 1.2rem;
 }
 
@@ -259,81 +324,4 @@ input[type="checkbox"]{
 .footer-container span {
   color: crimson;
  }
-
-
-
-
-
-/*Responsive Media queries for mobile device*/
-
-
-@media (max-width: 1000px){
-  nav{
-    padding: 0 40px 0 50px;
-  }
-}
-
-
-@media (max-width: 920px) {
-   nav {
-    height: 60px;    
-    background-color: #dff0ee;
-  }
-  nav .menu-btn i{
-    display: block;
-    color: crimson;
-  }
-
-  #click:checked ~ .menu-btn i:before{
-    content: "\f00d";
-  }
-
-
-  nav ul{
-    position: absolute;
-    top: 64px;
-    left: -120%;
-    background-color: white;
-    height: 50%;
-    width: 100%;
- /*   text-align: center;*/
-   
-    display: block;
-  }
-
-  #click:checked ~ ul{
-    left: 0;
-    background-color: pink;
-   
-  }
-  nav ul li{
-    width: 90%;
-    margin: 25px -40px;
-  }
-  nav ul li a{
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-  }
-  #click:checked ~ ul li a{
-    margin-left: 2.7rem;
-  }
-  nav ul li a.active,
-  nav ul li a:hover{
-    background: crimson;
-    color: white;
-  }
-}
-
-@media (max-width: 768px) {
-  nav .menu-btn {
-    display: block;
-  }
-  nav ul {
-    display: none;
-  }
-  #click:checked ~ ul {
-    display: block;
-  }
-}
+/*footer section ends here*/
